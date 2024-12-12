@@ -1,0 +1,354 @@
+/*
+** STYLE ELEMENTS GENERAUX
+*/
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+
+    border: 0.2rem solid #0e016e;
+    border-radius:10px;
+
+    padding: 2rem;
+    margin: 2rem 13rem;
+}
+
+/* Reset les marges par défaut sur les titres */
+h1, h2 {
+    margin: 0;
+}
+
+h1 {
+    margin-top: 0.8rem;
+    background-color: transparent;
+}
+
+h2 {
+    color: #0e016e;
+    font-size: large;
+
+    width: fit-content;
+}
+
+/* Reset les marges par défaut sur les paragraphes */
+p {
+    margin: 0px;
+}
+
+ul {
+    margin: 0.5rem 0 1rem 0;
+    position: relative;
+    right: 1.5rem;
+}
+
+/* Customisation ligne de séparation */
+hr {
+    width: 76%;
+    margin-left: 22%;
+    margin-right: 3%;
+    border:none;
+    border-top: 0.15rem solid #d4d4d4;
+    background-color: #d4d4d4;
+}
+
+/*
+** LAYOUT GLOBAL
+*/
+header,
+.main_resume_section {
+    margin: 1% 0;
+
+    display: flex;
+    gap: 2rem;
+}
+
+.margin_element {
+    flex-basis: 20%;
+
+    display: flex;
+    justify-content: end;
+}
+
+.main_element {
+    flex-basis: 80%;
+}
+
+.smaller_section_title {
+    width: 8rem;
+    text-align: right;
+    overflow: hidden;
+}
+
+/*
+** JAUGE DE PROGRESSION
+*/
+progress {
+    /* Suppression de l'apparence apportée par les navigateurs */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    width: 12rem;
+    height: 10px;
+
+    /* Couleur de fond de la barre de progression */
+    background-color: #ababab;
+    border-radius: 10px;
+    /* Pas d'overflow au-delà des bords arrondis */
+    overflow: hidden;
+}
+
+/* Customisation pour les navigateurs type Chrome, Safari... */
+progress::-webkit-progress-bar {
+    background-color: #ababab;
+}
+
+progress::-webkit-progress-value {
+    /* Couleur de la barre de progression */
+    background-color: #0e016e;
+    border-radius: 10px;
+}
+
+/* Customisation pour Firefox */
+progress::-moz-progress-bar {
+    background-color: #0e016e;
+    border-radius: 10px;
+}
+
+/*
+** HEADER
+*/
+.margin_element img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.contact_form {
+    width: 25rem;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
+.contact_form div {
+    height: 2rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.contact_form div img {
+    object-fit: contain;
+    max-width: 3rem;
+    height:auto;
+}
+
+#job_position {
+    color: #0e016e;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/*
+** EXPERIENCES & DIPLÔMES
+*/
+.experience_title_container {
+    width: 95%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.experience_title {
+    color: black;
+}
+
+/*
+** COMPETENCES & LANGUES
+*/
+/* Concerne uniquement la section compétences */
+#customise_container {
+    height: 10rem;
+}
+
+/* Concerne la section compétences et langues */
+.main_element:has(> .progress_container) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15% 20%;
+}
+
+.progress_container {
+    display:flex;
+    flex-direction: column;
+}
+
+.progress_label {
+    font-weight: 700;
+}
+
+/*
+** CENTRES D'INTERET
+*/
+.hobbies_container {
+    height: 4.5rem;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.hobbie_container {
+    display: flex;
+    align-content: start;
+    gap:0.3rem;
+}
+
+.check {
+    height: 0.65rem;
+    width: 0.25rem;
+
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    transform: rotate(45deg);
+    margin: 0.2rem 0.5rem;
+}
+
+/*
+** FORMULAIRE
+*/
+#special_line {
+    width: 90%;
+    margin: 3% 2% 2% 5%;
+}
+
+.customise_form {
+    background: linear-gradient(to right, #C6FFDD, #FBD786, #f7797d);
+
+    width: 90%;
+    margin: auto;
+    padding: 1% 2%;
+
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.customise_form h1 {
+    color: #0e016e;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.customise_form p {
+    padding-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 3rem 10rem;
+}
+
+.info div,
+.contact_message {
+    display: flex;
+    flex-direction: column;
+    label {
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+}
+
+.contact_message {
+    margin: 2%;
+}
+
+textarea {
+    min-height: 10rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.input_field {
+    min-width: 20rem;
+    min-height: 2rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+/* Customise submit button (inspired from CSS Scan style) */
+input[type="submit"] {
+    appearance: none;
+    background-color: #2ea44f;
+    border: 1px solid rgba(27, 31, 35, .15);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-weight: 600;
+    padding: 0.5rem 0.8rem;
+    align-self: center;
+}
+
+input[type="submit"]:hover {
+    background-color: #2c974b;
+}
+
+input[type="submit"]:focus {
+    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+    outline: none;
+}
+
+input[type="submit"]:disabled {
+    background-color: #94d3a2;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: default;
+}
+
+input[type="submit"]:active {
+    background-color: #298e46;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+/*
+** RESPONSIVENESS
+*/
+@media only screen and (max-width: 1750px) {
+    body {
+        margin: 2rem 10rem;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    body {
+        margin: 2rem 2rem;
+        border: none;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    #customise_container {
+        gap: 15% 12%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        margin: 2rem 1rem;
+    }
+
+    #customise_container {
+        gap: 15% 7%;
+    }
+}

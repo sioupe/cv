@@ -103,13 +103,13 @@ progress::-webkit-progress-bar {
 
 progress::-webkit-progress-value {
     /* Couleur de la barre de progression */
-    background-color: #0e016e;
+    background-color: #553c87;
     border-radius: 10px;
 }
 
 /* Customisation pour Firefox */
 progress::-moz-progress-bar {
-    background-color: #0e016e;
+    background-color: #553c87;
     border-radius: 10px;
 }
 
@@ -224,7 +224,7 @@ progress::-moz-progress-bar {
 }
 
 .customise_form {
-    background: linear-gradient(to right, #C6FFDD, #FBD786, #f7797d);
+    background: linear-gradient(to right, #0b3cd3, #dbdbe3, #e31d26);
 
     width: 90%;
     margin: auto;
